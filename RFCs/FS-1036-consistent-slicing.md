@@ -47,19 +47,20 @@ When `l=[0;1;2]` the current behavior is
 | 0             | [0]           | [0]     | [0;1;2]   | [0;1;2] |
 | 1             | [0;1]         | [0;1]   | [1;2]     | [1;2]   |
 | 2             | [0;1;2]       | [0;1;2] | [2]       | [2]     |
-| ≥3            | error         | error   | []        | **error** |
+| 3             | error         | error   | []        | []     |           
+| >3            | error         | error   | []        | **error** |
 
 The bold errors should be changed to [] for consistency.
 
 `l.[..j]` should give:
-[] if j < 0
-the first j+1 elements of l when -1 ≤ j ≤ l.Length-1
-error when l.Length≤j
+* [] if j < 0
+* the first j+1 elements of l when -1 ≤ j ≤ l.Length-1
+* error when l.Length≤j
 
 Similarly `l.[i..]` should give:
-error when i < 0
-the last (l.Length-i) elements of l when 0 ≤ i ≤ l.Length
-[] when l.Length ≤ i
+* error when i < 0
+* the last (l.Length-i) elements of l when 0 ≤ i ≤ l.Length
+* [] when l.Length ≤ i
 
 # Drawbacks
 [drawbacks]: #drawbacks
