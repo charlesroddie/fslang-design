@@ -1,6 +1,26 @@
 # F# Language Design RFCs 
 
-RFCs and docs related to the F# language design process. The Process:
+RFCs (requests for comments) and docs related to the F# language design process. 
+
+* [Open F# Language RFCs (including candidates for F# vNext)](https://github.com/fsharp/fslang-design/blob/master/RFCs)
+
+* [RFCs implemented in F# 4.5](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.5)
+
+* [RFCs implemented in FSharp.Core 4.4.5.0](https://github.com/fsharp/fslang-design/tree/master/FSharp.Core-4.4.5.0)
+
+* [RFCs implemented in F# 4.1 update](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1b)
+
+* [RFCs implemented in FSharp.Core 4.4.3.0](https://github.com/fsharp/fslang-design/tree/master/FSharp.Core-4.4.3.0)
+
+* [RFCs implemented in F# 4.1](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1)
+
+* [RFCs implemented in F# 4.0](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.0)
+
+* [F# Tooling RFCs](https://github.com/fsharp/fslang-design/blob/master/tooling)
+
+
+
+### The Process:
 
 1. Use [F# Language Suggestions](https://github.com/fsharp/fslang-suggestions) to submit ideas, vote on them and discuss them.
 
@@ -17,19 +37,25 @@ All in-progress RFCs, listed in the [RFC folder](https://github.com/fsharp/fslan
 
 When RFCs are implemented and a version of F# is revved, the RFCs which correspond to the F# version they were implemented in are archived under the appropriate folder.
 
-For RFCs that were implemented in F# 4.0, see the [F# 4.0 RFCs](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.0)
+### Language Update Release Trains
 
-For RFCs that were implemented in F# 4.1, see the [F# 4.1 RFCs](https://github.com/fsharp/fslang-design/blob/master/FSharp-4.1)
 
-## Open RFCs
+1. Delivery of language features is via RFCs plus implementations submitted to https://github.com/Microsoft/visualfsharp.
 
-* [F# RFC FS-1001 - String interpolation](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1001-StringInterpolation.md)
-* [F# RFC FS-1003 - Add nameof Operator](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1003-nameof-operator.md)
-* [F# RFC FS-1011 - Warn when recursive function is not tail-recursive](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1011-warn-on-recursive-without-tail-call.md)
-* [F# RFC FS-1018 - Adjust extension method scope](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1018-adjust-extensions-method-scope.md)
-* [F# RFC FS-1021 - Support Interop with ValueTask in Async Type](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1021-value-task-interop.md)
-* [F# RFC FS-1023 - Allow type providers to generate types from types](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1023-type-providers-generate-types-from-types.md)
-* [F# RFC FS-1024 - Simplify call syntax for statically resolved member constraints](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1024-simplify-call-syntax-for-statically-resolved-member-constraints.md)
-* [F# RFC FS-1025 - Improve record type inference](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1025-improve-record-type-inference.md)
-* [F# RFC FS-1026 - Allow params dictionaries as method arguments](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1026-allow-params-dictionaries-as-method-arguments.md)
-* [F# RFC FS-1028 - Implement Async.StartImmediateAsTask](https://github.com/fsharp/fslang-design/blob/master/RFCs/FS-1028-Implement%20Async.StartImmediateAsTask.md)
+2. We use incremental delivery of language features.  
+
+3. What this means procedurally is that when we have 1-3 100% “ready, tested and completed” FSharp.Core and F# Language features that aren't "too minor" then we will bump the language version in the actively developed release train branch (e.g. `dev15.8`) and start to merge the features to both master and that release branch.
+
+3. Practically speaking, this means the features are "on the train" to ship in preview releases of various tooling about ~1-2 months after integration, and non-preview releases about 2-3 months later (depending on everything).
+
+4. The feature set will get integrated and shipped in Visual Studio, FCS packages, Mono and .NET SDK compilers in about the same timeframe.  (Other editors can pick up an updated FCS pretty quickly)
+
+5. We may delay some features until a "major version release" (which may or may not corresponds to a new version of Visual Studio)
+
+### Roadmap and Areas of Priority Work
+
+Any or all of the [approved-in-principle](https://github.com/fsharp/fslang-suggestions/labels/approved-in-principle) items are eligible to catch a release train.  That is as good as it gets for a "roadmap" for the language design.
+
+The BDFL (@dsyme) has put together a list of "proposed priority" approved language design items which he plans to focus on or which other people have taken past RFC stage.  This is _not_ a roadmap, because other people will choose to prioritize other approved items (e.g. match! - which is not a priority item for me), and is also subject to change and edit.. It is an informal list.  You can find that list here: https://github.com/fsharp/fslang-suggestions/labels/proposed-priority 
+
+

@@ -5,7 +5,7 @@ This RFC covers the detailed proposal for this suggestion.
 
 * [x] Approved in principle
 * [ ] [Suggestion](https://github.com/fsharp/fslang-suggestions/issues/fill-me-in)
-* [ ] Details: [under discussion](https://github.com/fsharp/FSharpLangDesign/issues/FILL-ME-IN)
+* [ ] Details: [under discussion](https://github.com/fsharp/fslang-design/issues/FILL-ME-IN)
 * [ ] Implementation: [In progress](https://github.com/Microsoft/visualfsharp/pull/FILL-ME-IN)
 
 
@@ -41,6 +41,16 @@ Why should we *not* do this?
 [alternatives]: #alternatives
 
 What other designs have been considered? What is the impact of not doing this?
+
+# Compatibility
+[compatibility]: #compatibility
+
+Please address all necessary compatibility questions:
+* Is this a breaking change?
+* What happens when previous versions of the F# compiler encounter this design addition as source code?
+* What happens when previous versions of the F# compiler encounter this design addition in compiled binaries?
+* If this is a change or extension to FSharp.Core, what happens when previous versions of the F# compiler encounter this construct?
+
 
 # Unresolved questions
 [unresolved]: #unresolved-questions

@@ -1,14 +1,14 @@
 
 # F# RFC FS-1003 - nameof Operator
 
-The design suggestion [nameof operator](http://fslang.uservoice.com/forums/245727-f-language/suggestions/5900625-add-nameof-operator-to-follow-c-vb-update) has been marked "approved in principle".
+The design suggestion [nameof operator](https://github.com/fsharp/fslang-suggestions/issues/252) has been marked "approved in principle".
 This RFC covers the detailed proposal for this suggestion.
 
 [Discussion thread](https://github.com/fsharp/FSharpLangDesign/issues/48)
 
 * [x] Approved in principle
 * [ ] Details: [under discussion](https://github.com/fsharp/FSharpLangDesign/issues/48)
-* [ ] Implementation: [In progress](https://github.com/Microsoft/visualfsharp/pull/2290)
+* [ ] Implementation: [In progress](https://github.com/Microsoft/visualfsharp/pull/6325)
 
 ### Introduction
 
@@ -26,7 +26,7 @@ It would be useful to have this to extract the name of expressions, like:
 
 ```fsharp
 let add x y =
-    if x < 0 then raise (ArgumentOutOfRangeException(nameof(x)))
+    if x < 0 then raise (ArgumentOutOfRangeException(nameof(x))
     x + y
 ```
 
@@ -58,7 +58,7 @@ Additional considerations:
 - can get member names
 - can get static member names
 - can get static property names
-- can get names that quoted in ````
+- can get names that quoted in <code>``</code>
 - can get names of operators like `+`, `|>`, `typeof`, `nameof`, ...
 - can be used in pattern matching
 - can be used with generic functions/types
